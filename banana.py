@@ -1,0 +1,92 @@
+def banana():
+    bananaPrice = 120
+    bananaQuantity = 20
+    bananaReq= int(input(f"There are {bananaQuantity} dozens of bananas, each dozen cost {bananaPrice} pkr. How much do you want: "))
+    bananaQuantity = bananaQuantity - bananaReq
+    bananatotal  = bananaPrice * bananaReq
+    if bananaReq > bananaQuantity :
+        print("There are not enough dozens of bananas")
+        banana()
+    else:
+        print(f"Thanks for buying. You total price of Bananas are {bananatotal}")
+    return bananatotal
+
+def apple():
+    applePrice = 200
+    appleQuantity = 25
+    appleReq= int(input(f"There are {appleQuantity} kilograms of apple, each kilos cost {applePrice} pkr. How much do you want: "))
+    appleQuantity = appleQuantity - appleReq
+    appleTotal = applePrice * appleReq
+    if appleReq > appleQuantity :
+        print("There are not enough kilos of apples")
+        apple()
+    else:
+        print(f"Thanks for buying. You total price of Apples are {appleTotal}")
+    return appleTotal
+
+def watermelon():
+    watermelonPrice = 110
+    watermelonQuantity = 20
+    watermelonReq = int(input(f"There are {watermelonQuantity} kilograms of watermelon, each kilo cost {watermelonPrice} pkr."))
+    watermelonQuantity = watermelonQuantity - watermelonReq
+    watermelonTotal = watermelonPrice * watermelonReq
+    if watermelonReq > watermelonQuantity :
+        print("There are not enough kilos of watermelons")
+        watermelon()
+    else:
+        print(f"Thanks for buying. You total price of watermelons are {watermelonTotal}")
+    return watermelonTotal
+
+def melon():
+    melonPrice = 250
+    melonQuantity = 25
+    melonReq = int(input(f"There are {melonQuantity} kilograms of melon, each kilo cost {melonPrice} pkr."))
+    melonQuantity = melonQuantity - melonReq
+    melonTotal = melonPrice * melonReq
+    if melonReq > melonQuantity :
+        print("There are not enough kilos of melons")
+        melon()
+    else:
+        print(f"Thanks for buying. You total price of melons are {melonTotal}")
+    return melonTotal
+
+def grapes():
+    grapesPrice = 120
+    grapesQuantity = 25
+    grapesReq = int(input(f"There are {grapesQuantity} dozens of grapes, each dozen cost {grapesPrice} pkr."))
+    grapesQuantity = grapesQuantity - grapesReq
+    grapesTotal = grapesPrice * grapesReq
+    if grapesReq > grapesQuantity :
+        print(f"There are not enough dozens of grapes")
+        grapes()
+    else:
+        print(f"Thanks for buying. You total price of grapes are {grapesTotal}")
+    return grapesTotal
+
+
+def fruits():
+    buyFruit = input("Which fruit do you want to buy? ")
+    if buyFruit == "watermelon":
+        watermelon()
+    elif buyFruit == "apple":
+        apple()
+    elif buyFruit == "melon":
+        melon()
+    elif buyFruit == "grapes":
+        grapes()
+    elif buyFruit == "banana":
+        banana()
+    else:
+        print(f"We have no fruit that name is {buyFruit}. retry. ")
+        fruits()
+    more()
+
+def more():
+    morefruits = input("Do you want to buy more fruits? (yes/no): ")
+    if morefruits == "yes":
+        fruits()
+    elif morefruits == "no":
+        print("Goodbye")
+    else:
+        print(f"Please enter yes or no.")
+        more()
