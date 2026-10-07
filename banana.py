@@ -1,19 +1,21 @@
 def banana():
     bananaPrice = 120
     bananaQuantity = 20
+    bananaTotal = 0
     bananaReq= int(input(f"There are {bananaQuantity} dozens of bananas, each dozen cost {bananaPrice} pkr. How much do you want: "))
     bananaQuantity = bananaQuantity - bananaReq
-    bananatotal  = bananaPrice * bananaReq
+    bananaTotal  = bananaPrice * bananaReq
     if bananaReq > bananaQuantity :
         print("There are not enough dozens of bananas")
         banana()
     else:
-        print(f"Thanks for buying. You total price of Bananas are {bananatotal}")
-    return bananatotal
+        print(f"Thanks for buying. You total price of Bananas are {bananaTotal}")
+    return bananaTotal
 
 def apple():
     applePrice = 200
     appleQuantity = 25
+    appleTotal = 0
     appleReq= int(input(f"There are {appleQuantity} kilograms of apple, each kilos cost {applePrice} pkr. How much do you want: "))
     appleQuantity = appleQuantity - appleReq
     appleTotal = applePrice * appleReq
@@ -27,6 +29,7 @@ def apple():
 def watermelon():
     watermelonPrice = 110
     watermelonQuantity = 20
+    watermelonTotal = 0
     watermelonReq = int(input(f"There are {watermelonQuantity} kilograms of watermelon, each kilo cost {watermelonPrice} pkr."))
     watermelonQuantity = watermelonQuantity - watermelonReq
     watermelonTotal = watermelonPrice * watermelonReq
@@ -40,6 +43,7 @@ def watermelon():
 def melon():
     melonPrice = 250
     melonQuantity = 25
+    melonTotal = 0
     melonReq = int(input(f"There are {melonQuantity} kilograms of melon, each kilo cost {melonPrice} pkr."))
     melonQuantity = melonQuantity - melonReq
     melonTotal = melonPrice * melonReq
@@ -53,6 +57,7 @@ def melon():
 def grapes():
     grapesPrice = 120
     grapesQuantity = 25
+    grapesTotal = 0
     grapesReq = int(input(f"There are {grapesQuantity} dozens of grapes, each dozen cost {grapesPrice} pkr."))
     grapesQuantity = grapesQuantity - grapesReq
     grapesTotal = grapesPrice * grapesReq
