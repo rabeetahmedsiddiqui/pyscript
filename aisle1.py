@@ -1,9 +1,3 @@
-from banana import banana
-from banana import apple
-from banana import watermelon
-from banana import melon
-from banana import grapes
-from banana import more
 from banana import fruits
 
 def aisle1():
@@ -16,9 +10,9 @@ def aisle1():
     print("         Grapes")
     want = input(f"Do you want to buy fruits: (yes/no) ")
     if want == "yes":
-        fruits()
+        return fruits()
     elif want == "no":
         print("Goodbye")
+        return 0
     else:
         print("Please enter yes or no.")
-        want
